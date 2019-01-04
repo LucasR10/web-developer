@@ -13,6 +13,9 @@ import javax.servlet.annotation.WebFilter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+
+
+
 @WebFilter(servletNames="example-servlet")
 public class ExampleFilter implements Filter {
 	private static final Log log = LogFactory.getLog(ExampleFilter.class);
