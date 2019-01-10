@@ -31,7 +31,13 @@ public class MyServlet extends HttpServlet{
 	    resp.getWriter().println(" resp.getContentType() "+ resp.getContentType() );
 	    resp.getWriter().println(" resp.getStatus() "+  resp.getStatus() );
 	    resp.getWriter().println(" resp.getStatus() "+  resp.getBufferSize());
-	    
+	    resp.getWriter().println(" User-Agent "+  req.getHeader("User-Agent"));
+	    ;
+	    for (String iterable_element : req.getParameterValues("nome")) {
+	    	resp.getWriter().println( iterable_element );
+		}
+            	    
+	     //resp.sendRedirect("/WebApp/formulario.jsp");
 	 }
 	 
 }
