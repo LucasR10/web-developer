@@ -36,7 +36,8 @@ public class MyServlet extends HttpServlet{
 	    for (String iterable_element : req.getParameterValues("nome")) {
 	    	resp.getWriter().println( iterable_element );
 		}
-            	    
+	    resp.getWriter().append("email: ").append( getServletConfig().getInitParameter(LendoParamWebXml.EMAIL));  
+	    resp.getWriter().append("email: ").append( getServletContext().getInitParameter(LendoParamWebXml.EMAIL)); 
 	     //resp.sendRedirect("/WebApp/formulario.jsp");
 	 }
 	 

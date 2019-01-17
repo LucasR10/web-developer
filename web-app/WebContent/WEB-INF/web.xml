@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>WebApp</display-name>
   
+  <display-name>WebApp</display-name>
   
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
 
- <servlet>
-  <servlet-name>myServlet</servlet-name>
-  <servlet-class>br.com.webdeveloper.servlets.MyServlet</servlet-class>
- </servlet>
- 
- <servlet-mapping>
-  <servlet-name>myServlet</servlet-name>
-  <url-pattern>*.do</url-pattern>
+	<servlet>
+		<servlet-name>myServlet</servlet-name>
+		<servlet-class>br.com.webdeveloper.servlets.MyServlet</servlet-class>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>likewecare@servlet.com.br</param-value>
+		</init-param>
+	</servlet>
+	
+	 <context-param>
+			<param-name>email</param-name>
+			<param-value>likewecare@servlet.com.br</param-value>
+  </context-param>
+  
+  <servlet-mapping>
+    <servlet-name>myServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+  <description>testando o listner</description>
+    <listener-class>br.com.webdeveloper.servlets.listner.HttpSessionBindingListnerTeste</listener-class>
+  </listener>
+
+  
 </web-app>
