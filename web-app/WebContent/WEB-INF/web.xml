@@ -19,7 +19,17 @@
 	 <context-param>
 			<param-name>email</param-name>
 			<param-value>likewecare@servlet.com.br</param-value>
-  </context-param>
+     </context-param>
+     
+     	 <context-param>
+			<param-name>user</param-name>
+			<param-value>root</param-value>
+         </context-param>
+     
+     	 <context-param>
+			<param-name>pas</param-name>
+			<param-value>123456789</param-value>
+     </context-param>
   
   <servlet-mapping>
     <servlet-name>myServlet</servlet-name>
