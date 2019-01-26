@@ -2,6 +2,7 @@ package br.com.webdeveloper.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +26,11 @@ public class MyServletConexaMysql extends HttpServlet {
 		}else {
 			req.removeAttribute(USER);
 		}
-		
+		this.log("");
+		//RequestDispatcher view = req.getRequestDispatcher("result.jsp");
+		RequestDispatcher view = getServletContext().getRequestDispatcher("cadastro.jsp");
+        view.forward(req, resp);//redirecionando para pagina cadastro.jsp.
+        
 		resp.getWriter().append("objota : ").append( req.getSession().getAttribute(USER) + "" );
 	}
 }
