@@ -28,6 +28,10 @@ public class MyServletConexaMysql extends HttpServlet {
 		}
 		this.log("");
 		//RequestDispatcher view = req.getRequestDispatcher("result.jsp");
+		
+		//faz com que a resposta seja concluida.
+		resp.getOutputStream().flush();
+		//O conteiner vai vai mostra IllegaArgumentException. Soicitação foi enviada depois de cloncluida.
 		RequestDispatcher view = getServletContext().getRequestDispatcher("cadastro.jsp");
         view.forward(req, resp);//redirecionando para pagina cadastro.jsp.
         
