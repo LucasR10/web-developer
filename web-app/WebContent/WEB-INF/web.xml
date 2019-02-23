@@ -4,14 +4,23 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <servlet-name>myServlet</servlet-name>
     <servlet-class>br.com.webdeveloper.servlets.MyServlet</servlet-class>
+<!--     <jsp-file>/teste.jsp</jsp-file> -->
+    
     <init-param>
       <param-name>email</param-name>
       <param-value>likewecare@servlet.com.br</param-value>
     </init-param>
   </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>myServlet</servlet-name>
+    <url-pattern>/teste.js</url-pattern>
+  </servlet-mapping>
+  
   <context-param>
     <param-name>email</param-name>
     <param-value>likewecare@servlet.com.br</param-value>
@@ -24,12 +33,24 @@
     <param-name>pas</param-name>
     <param-value>123456789</param-value>
   </context-param>
+  
   <servlet-mapping>
     <servlet-name>myServlet</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
   <listener>
     <description>testando o listner</description>
     <listener-class>br.com.webdeveloper.servlets.listner.HttpSessionBindingListnerTeste</listener-class>
   </listener>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+<!-- 	     Isto desabilita os elementos scripting para todos os JSPs,
+			 na aplicação, porque usamos o *.jsp como padrão de URL. -->
+			<scripting-invalid>true</scripting-invalid>
+		</jsp-property-group>
+	</jsp-config>
+  
 </web-app>
