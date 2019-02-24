@@ -49,7 +49,7 @@
 			<url-pattern>*.jsp</url-pattern>
 <!-- 	     Isto desabilita os elementos scripting para todos os JSPs,
 			 na aplicação, porque usamos o *.jsp como padrão de URL. -->
-			<scripting-invalid>true</scripting-invalid>
+			<scripting-invalid>false</scripting-invalid>
 		</jsp-property-group>
 	</jsp-config>
   
