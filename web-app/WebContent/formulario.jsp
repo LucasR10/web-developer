@@ -14,6 +14,6 @@
 		<input type="submit">
 	</form>
 	
-	<%=request.getParameterValues("nome")%>
+<%-- 	<%=request.getParameterValues("nome")%> --%>
 </body>
 </html>
