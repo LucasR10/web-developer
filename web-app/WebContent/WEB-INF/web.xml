@@ -4,6 +4,15 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+
+
+	<env-entry>
+	    <description>The name was explicitly set in the annotation so the classname prefix isn't required</description>
+		<env-entry-name>RESOURCE1</env-entry-name>
+		<env-entry-type>java.lang.String</env-entry-type>
+		<env-entry-value>AAA</env-entry-value>
+	</env-entry>
+  
   
   <servlet>
     <servlet-name>myServlet</servlet-name>
