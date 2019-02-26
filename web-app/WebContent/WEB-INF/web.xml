@@ -44,13 +44,28 @@
     <listener-class>br.com.webdeveloper.servlets.listner.HttpSessionBindingListnerTeste</listener-class>
   </listener>
 
-	<jsp-config>
-		<jsp-property-group>
-			<url-pattern>*.jsp</url-pattern>
-<!-- 	     Isto desabilita os elementos scripting para todos os JSPs,
-			 na aplicação, porque usamos o *.jsp como padrão de URL. -->
-			<scripting-invalid>false</scripting-invalid>
-		</jsp-property-group>
-	</jsp-config>
+<!-- 	<jsp-config> -->
+<!-- 		<jsp-property-group> -->
+<!-- 			<url-pattern>*.jsp</url-pattern> -->
+<!-- 	     Isto desabilita os elementos scripting para todos os JSPs, -->
+<!-- 			 na aplicação, porque usamos o *.jsp como padrão de URL. --> 
+<!-- 			<scripting-invalid>false</scripting-invalid> -->
+<!-- 		</jsp-property-group> -->
+<!-- 	</jsp-config> -->
+<!-- <jsp-config> -->
+<!-- 	<taglib> -->
+<!-- 		<taglib-uri>https://dev.com/jsp/tlds/mytag</taglib-uri> -->
+<!-- 		<taglib-location>/WEB-INF/func.tld</taglib-location> -->
+<!-- 	</taglib> -->
+<!-- 	</jsp-config> -->
+
+<jsp-config> 
+    <taglib>
+      <taglib-uri>/jspfunc</taglib-uri>
+      <taglib-location>
+        /WEB-INF/taglib.tld 
+      </taglib-location>
+    </taglib>
+  </jsp-config>
   
 </web-app>

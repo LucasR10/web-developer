@@ -62,10 +62,10 @@
      ${maymap["2"]} -
      Cidade 2  <br>
      
-     ${maymap[ indece[1] ]}
-     ${maymap[ indece[2]+ 1 ]}
+     ${maymap[ indece[0] ]}
+     ${maymap[ indece[0]+ 1 ]}
      ${maymap[ indece["4"] ] }
-     ${maymap[ indece[ indece[3] ]  ] }
+<%--      ${maymap[ indece[ ]} --%>
      
      
 </body>
