@@ -42,7 +42,7 @@
 	</c:when>   
 	<c:otherwise >     
 		<c:out value="Good Afternoon" />   
-	</c:otherwise>
+	</c:otherwise> 
 	</c:choose>
 
 

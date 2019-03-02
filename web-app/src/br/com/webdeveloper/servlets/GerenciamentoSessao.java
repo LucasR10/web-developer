@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSessionBindingEvent;
 import javax.servlet.http.HttpSessionBindingListener;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 
 
 @WebServlet(description = "Servlet Para gerenciar sessao", urlPatterns = { "/sessao" })
