@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tomcat.util.http.parser.Cookie;
+
 public class MyServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -18,6 +20,7 @@ public class MyServlet extends HttpServlet{
 	 @Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	    
+		 javax.servlet.http.Cookie c = new javax.servlet.http.Cookie("valor", "val");
 		 
 		resp.setContentType("text/hml");
 	    resp.getWriter().println(" Não, não se trata so de tamanho");
