@@ -39,10 +39,17 @@
     <param-value>123456789</param-value>
   </context-param>
   
+  
+  <servlet>
+    <servlet-name>myServlet</servlet-name>
+    <servlet-class>br.com.webdeveloper.servlets.MyServlet</servlet-class>
+   </servlet>
+    
   <servlet-mapping>
     <servlet-name>myServlet</servlet-name>
-    <url-pattern>*.do</url-pattern>
+    <url-pattern>/app/bar/*</url-pattern>
   </servlet-mapping>
+  
   
   <listener>
     <description>testando o listner</description>
