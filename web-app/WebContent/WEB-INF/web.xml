@@ -6,12 +6,12 @@
   </welcome-file-list>
 
 
-	<env-entry>
-	    <description>The name was explicitly set in the annotation so the classname prefix isn't required</description>
-		<env-entry-name>RESOURCE1</env-entry-name>
-		<env-entry-type>java.lang.String</env-entry-type>
-		<env-entry-value>AAA</env-entry-value>
-	</env-entry>
+<!-- 	<env-entry> -->
+<!-- 	    <description>The name was explicitly set in the annotation so the classname prefix isn't required</description> -->
+<!-- 		<env-entry-name>RESOURCE1</env-entry-name> -->
+<!-- 		<env-entry-type>java.lang.String</env-entry-type> -->
+<!-- 		<env-entry-value>AAA</env-entry-value> -->
+<!-- 	</env-entry> -->
   
   
   <servlet>
@@ -40,16 +40,35 @@
   </context-param>
   
   
-  <servlet>
-    <servlet-name>myServlet</servlet-name>
-    <servlet-class>br.com.webdeveloper.servlets.MyServlet</servlet-class>
-   </servlet>
+<!--   <servlet> -->
+<!--     <servlet-name>myServlet</servlet-name> -->
+<!--     <servlet-class>br.com.webdeveloper.servlets.MyServlet</servlet-class> -->
+<!--     <load-on-startup>2</load-on-startup> -->
+<!--    </servlet> -->
     
   <servlet-mapping>
     <servlet-name>myServlet</servlet-name>
     <url-pattern>/app/bar/*</url-pattern>
   </servlet-mapping>
   
+  
+<!--   <ejb-ref> -->
+<!--     <ejb-ref-name>ejb/Customer</ejb-ref-name> -->
+<!--     <ejb-ref-type>Entity</ejb-ref-type> -->
+<!--     <home>com.wickedlysmart.CustomeHome</home> -->
+<!--     <remote>com.wickedly.Custome</remote> -->
+<!--   </ejb-ref> -->
+  
+<!--   <env-entry> -->
+<!--     <env-entry-name>rates/discountRate</env-entry-name> -->
+<!--      <env-entry-type>java.lang.Integer</env-entry-type> -->
+<!--      <env-entry-value>10</env-entry-value> -->
+<!--   </env-entry> -->
+  
+   <mime-mapping>
+     <extension>mpg</extension>
+     <mime-type>video/mpeg</mime-type>
+   </mime-mapping>
   
   <listener>
     <description>testando o listner</description>
@@ -80,5 +99,49 @@
       </taglib-location>
     </taglib>
   </jsp-config>
+  
+  
+   <login-config>BASIC</login-config>
+   
+    <security-role>
+       <role-name>Admin</role-name>
+    </security-role>
+    
+        <security-role>
+       <role-name>User</role-name>
+    </security-role>
+    
+    <security-constraint>
+    <display-name>Integridade de seuranca</display-name>
+	      <web-resource-collection>
+		      <description>Esse elemto é opicional</description>
+		         <web-resource-name>UpadeRecipes</web-resource-name>
+			         <url-pattern>/Beer/AddRecipe/*</url-pattern>
+			         <url-pattern>/Beer/admin/*</url-pattern>
+			         <http-method>GET</http-method>
+			         <http-method>POST</http-method>
+		            <http-method-omission></http-method-omission>
+	       </web-resource-collection>
+	    
+	       <auth-constraint>
+	              <description>testando papaeis</description>
+		         <role-name>Admin</role-name>
+		         <role-name>Member</role-name>
+		         <role-name>Menager</role-name>
+		         <role-name>User</role-name>
+		         <role-name>*</role-name>
+	       </auth-constraint>
+	       
+	       <user-data-constraint>
+	        	<description></description>
+	        	<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	       </user-data-constraint>
+	       
+    </security-constraint>
+    
+   
+    
+ 
+    
   
 </web-app>

@@ -20,19 +20,19 @@
 	  </function>
 	  
 	  
-	  <tag>
-	    <description>gera numero aleatório</description>
-	    <name>numero</name>
-	    <tag-class>br.com.webdeveloper.tags.CustomizandoTags</tag-class>
-	    <body-content>empty</body-content>
+<!-- 	  <tag> -->
+<!-- 	    <description>gera numero aleatório</description> -->
+<!-- 	    <name>numero</name> -->
+<!-- 	    <tag-class>br.com.webdeveloper.tags.CustomizandoTags</tag-class> -->
+<!-- 	    <body-content>empty</body-content> -->
 	    
-	    <attribute>
-	       <name>faixa</name>
-	       <required>true</required>
-	       <rtexprvalue>true</rtexprvalue>
-	    </attribute>
+<!-- 	    <attribute> -->
+<!-- 	       <name>faixa</name> -->
+<!-- 	       <required>true</required> -->
+<!-- 	       <rtexprvalue>true</rtexprvalue> -->
+<!-- 	    </attribute> -->
 	    
-	  </tag>
+<!-- 	  </tag> -->
 	  
 	  
 	  
