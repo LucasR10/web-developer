@@ -25,6 +25,20 @@
     </init-param>
   </servlet>
   
+  <filter>
+    <filter-name>mydilter</filter-name>
+    <filter-class>br.com.webdeveloper.filters.MyFilter</filter-class>
+    <init-param>
+      <param-name>opocional</param-name>
+      <param-value>opcional</param-value>
+    </init-param>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>mydilter</filter-name>
+    <servlet-name>myServlet</servlet-name>
+    <url-pattern>/root/*</url-pattern>
+  </filter-mapping>
   
   <context-param>
     <param-name>email</param-name>
@@ -101,7 +115,7 @@
   </jsp-config>
   
   
-   <login-config>BASIC</login-config>
+   <!-- <login-config>BASIC</login-config>
    
     <security-role>
        <role-name>Admin</role-name>
@@ -141,7 +155,7 @@
     
    
     
- 
+  -->
     
   
 </web-app>
